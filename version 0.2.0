@@ -433,6 +433,7 @@ func print401kBalances(_ combinedBalance: [(rothBalance: Decimal, tradBalance: D
     for (year, combined) in combinedBalance.enumerated() {
         print("Roth 401k Balance Year \(year + yearGroup + 1): \(combined.rothBalance)")
         print("Trad 401k Balance Year \(year + yearGroup + 1): \(combined.tradBalance)")
+        print("")
     }
 }
 //func print401kBalances(_ combinedBalance: [(rothBalance: Decimal, (tradBalance: Decimal, combined: Decimal))]) {
