@@ -63,7 +63,7 @@ struct Employee {
     var department: Department
     var monthlyHoursWorked: Int
     var regularPayRateIncreases: Bool
-    var regularPayRateIncreasePercentage: Int
+    var regularPayRateIncreasePercentage: Double
     var regularPayRateIncreaseYearInterval: Int
 
     private(set) var employmentHistory: [Department]
@@ -75,7 +75,7 @@ struct Employee {
          department: Department = .other("Employee"),
          monthlyHoursWorked: Int,
          regularPayRateIncreases: Bool,
-         regularPayRateIncreasePercentage: Int,
+         regularPayRateIncreasePercentage: Double,
          regularPayRateIncreaseYearInterval: Int)
     {
         self.name = name
@@ -174,7 +174,7 @@ func printYearlyDepartmentsAndEarnings(_ yearlyDeptsAndEarnings: [(departments: 
         print("")
     }
 }
-var charlotte = Employee("Charlotte Grote", birthdate: birthdate, hiredate: hiredate, retirementAge: 65, department: .other("Hospitality"), monthlyHoursWorked: 160, regularPayRateIncreases: true, regularPayRateIncreasePercentage: 4, regularPayRateIncreaseYearInterval: 4)
+var charlotte = Employee("Charlotte Grote", birthdate: birthdate, hiredate: hiredate, retirementAge: 65, department: .other("Hospitality"), monthlyHoursWorked: 160, regularPayRateIncreases: true, regularPayRateIncreasePercentage: 4.0, regularPayRateIncreaseYearInterval: 4)
 //give our employee some work history
 //months in Hospitality
 charlotte.work(months: firstDeptMonths)
